@@ -38,7 +38,7 @@ int main(int argc, const char * argv[])
         item.serialNumber = @"1234";
 //        [item setValueInDollars:100];
         item.valueInDollars = 100;
-        NSLog(@"%@ %@ %@ %d", [item itemName], [item dateCreated], [item serialNumber], [item valueInDollars]);
+        NSLog(@"%@", item); 
         
         
         // destroy the mutable array

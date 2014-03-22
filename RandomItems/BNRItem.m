@@ -10,6 +10,37 @@
 
 @implementation BNRItem
 
+-(instancetype)initWithItemName:(NSString*)name valueInDollars:(int)v serialNumber:(NSString*)sNumber
+{
+    self = [super init];
+    
+    if(self)
+    {
+        // give the instance variables inital values
+        _itemName = name;
+        _valueInDollars = v;
+        _serialNumber = sNumber;
+        _dateCreated = [[NSDate alloc] init];
+    }
+    
+    return self;
+}
+
+-(instancetype)initWithItemName:(NSString*)name
+{
+    self = [super init];
+    
+    if(self)
+    {
+        // give the instance variables inital values
+        _itemName = name;
+        _dateCreated = [[NSDate alloc] init];
+    }
+    
+    return self;
+
+}
+
 -(NSString*)description
 {
     NSString *descriptionString = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@", self.itemName, self.serialNumber, self.valueInDollars, self.dateCreated];
