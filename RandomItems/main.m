@@ -16,32 +16,20 @@ int main(int argc, const char * argv[])
         
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc]init];
-        // Send the message addobject
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
-        [items addObject:@"Three"];
         
-        // send another message, insertObject
-        [items insertObject:@"Zero" atIndex:0];
+        for(int i = 0; i < 10; i++)
+        {
+            BNRItem *randomItem = [BNRItem randomItem];
+            [items addObject:randomItem];
+        }
         
-        // for every item in the items array
-        for(NSString *item in items)
+        for(BNRItem *item in items)
         {
             NSLog(@"%@", item);
         }
         
-        BNRItem *item = [[BNRItem alloc]init];
-        
-//        [item setItemName:@"Red Sofa"];
-        item.itemName = @"Red Sofa";
-//        [item setSerialNumber:@"1234"];
-        item.serialNumber = @"1234";
-//        [item setValueInDollars:100];
-        item.valueInDollars = 100;
-        NSLog(@"%@", item); 
-        
-        
         // destroy the mutable array
+        NSLog(@"Setting items to nil..."); 
         items = nil;
         
     }

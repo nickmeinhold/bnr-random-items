@@ -15,11 +15,18 @@
     int _valueInDollars;
     NSDate *_dateCreated;
     
+    BNRItem *_containedItem;
+    BNRItem *_container;
+    
 }
+
++(instancetype)randomItem;
 
 // Designated initializer for BNRItem
 -(instancetype)initWithItemName:(NSString*)name valueInDollars:(int)v serialNumber:(NSString*)sNumber;
+-(instancetype)initWithItemName:(NSString*)name serialNumber:(NSString*)sNumber;
 -(instancetype)initWithItemName:(NSString*)name;
+
 -(void)setItemName:(NSString*)str;
 -(NSString*)itemName;
 
