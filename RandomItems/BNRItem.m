@@ -107,4 +107,27 @@
     return _dateCreated; 
 }
 
+-(void)setContainedItem:(BNRItem*)item
+{
+    _containedItem = item;
+    // when given an item to contain, the contained item
+    // will be given a pointer to its container
+    item.container = self;
+}
+
+-(BNRItem*)containedItem
+{
+    return _containedItem; 
+}
+
+-(void)setContainer:(BNRItem*)item
+{
+    _container = item;
+}
+
+-(BNRItem*)container
+{
+    return _container;
+}
+
 @end

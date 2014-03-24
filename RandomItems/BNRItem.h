@@ -38,4 +38,10 @@
 
 -(NSDate*)dateCreated;
 
+-(void)setContainedItem:(BNRItem*)item;
+-(BNRItem*)containedItem;
+
+-(void)setContainer;
+-(BNRItem*)container; 
+
 @end
